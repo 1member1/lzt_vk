@@ -91,7 +91,10 @@ def sendMes_thread():
 			try:
 				print(requests.post(url='https://lolz.guru/api/index.php?posts',data={'quote_post_id': mes[0],'thread_id': data["lzt"]["thread_id"],'post_body': mes[1]},headers={'Authorization': 'Bearer '+data["lzt"]["token"],'Cookie': 'xf_logged_in=1'}, proxies=proxies).text)
 			except Exception as e:
-				print(e)
+				try:
+					print(requests.post(url='https://lolz.guru/api/index.php?posts',data={'quote_post_id': mes[0],'thread_id': data["lzt"]["thread_id"],'post_body': mes[1]},headers={'Authorization': 'Bearer '+data["lzt"]["token"],'Cookie': 'xf_logged_in=1'}, proxies=proxies).text)
+				except Exception as e:
+					print(e)
 			
 			
 
