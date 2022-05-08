@@ -40,7 +40,7 @@ token_worker=data["vk"]["token_worker"]
 #----------------------------------SOME MODULES-------------------------------------
 
 def clean_link(url): # clean link
-	return str(url[url.find("']")+1:]).replace(']','').replace('[', '').replace('/','').replace('URL','').replace('www.','').replace('m.','').replace('vk.com','').replace("SRCI","").replace("\n","").replace(' ','').replace(':','').replace('https','').replace('http','').replace(',', '')
+	return str(url[url.find("']")+1:]).replace(']','').replace('[', '').replace('/','').replace('URL','').replace('www.','').replace('m.','').replace('vk.com','').replace("SRCI","").replace("\n","").replace(' ','').replace('https:','').replace('http:','').replace(',', '')
 
 with open('allpost.txt', "r") as f: # import ignore posts
 	for s in f:
